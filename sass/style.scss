@@ -13,6 +13,30 @@ body {
   display: flex;
   height: 100vh;
   flex-direction: column;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 45%, rgb(0, 0, 0) 50%), url(/assets/home_back.jpg);
   background-color: #000;
   background-size: cover;
+
+  .pages-container {
+    display: flex;
+    height: 100%;
+
+    .pages-inner-container {
+      width: 75%;
+      padding: 3% 0% 20% 6%;
+    }
+  }
+
+  .logo {
+    width: 400px;
+  }
+
+}
+
+.home-left-side {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  padding-top: 60px;
+  margin: 0 auto;
 }

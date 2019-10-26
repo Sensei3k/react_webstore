@@ -8,17 +8,17 @@ class Home extends React.Component {
 
     console.log(this.props, 'Home')
     console.log(this.props.data, 'data')
-    console.log(this.props.data.id, 'id')
+    // console.log(this.props.data.id, 'id')
     
   }
 
   render() {
     return(
-      <div>
-        <div>
-          <img src="/assets/logo.png"/>
-          <div>
-            {this.state.props.data.map(data => {
+      <div className='pages-container'>
+        <div className='pages-inner-container'>
+          <img className='logo' src="/assets/logo.png"/>
+          <div className='home-left-side'>
+            {this.props.data.map(data => {
               return(
                 <ProductCard
                   key={data.id}

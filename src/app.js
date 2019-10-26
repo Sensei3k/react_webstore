@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom'
 import Navbar from '../src/components/Navbar'
 // import Data from '../src/components/Data'
 import Home from '../src/components/Home'
+import Checkout from '../src/components/Checkout'
 
 import '../sass/style.scss'
 
@@ -14,28 +15,28 @@ const data = [
     title: 'Star Wars: Battlefront',
     description: 'Immerse yourself in the Ultimate star Wars Experience.',
     price: '300',
-    image: '/src/assets/game1.jpg'
+    image: '/assets/game1.jpg'
   },
   {
     id: '2',
     title: 'Dying Light',
     description: 'Dying Light is an open world first person survivor horror action adventure developed by Techland.',
     price: '500',
-    image: '/src/assets/game2.jpg'
+    image: '/assets/game2.jpg'
   },
   {
     id: '3',
     title: 'Bloodbourne',
     description: 'Bloobourne is an action role-playing video game developed by FromSoftware.',
     price: '9999',
-    image: '/src/assets/game3.jpg'
+    image: '/assets/game3.jpg'
   },
   {
     id: '3',
     title: 'Evolve',
     description: 'Evolve is a first person shooter video game developed by Turtle Rock Studios.',
     price: '150',
-    image: '/src/assets/game4.jpg'
+    image: '/assets/game4.jpg'
   }
 ]
 class App extends React.Component {
@@ -88,7 +89,13 @@ class App extends React.Component {
             removeFromBasket={id => this.removeFromBasket(id)}
             goToCheckout={() => this.navigate('CHECKOUT')}
           />
-        ) : (null)}
+        ) : (
+          <Checkout
+            data={data.filter(val => this.state.selectedIds.includes(val.id))}
+            removeFromBasket={id => this.removeFromBasket(id)}
+            goToHome={() => this.navigate('HOME')}
+          />
+        )}
       </div>
     )
   } 
