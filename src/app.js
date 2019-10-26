@@ -5,7 +5,7 @@ import '../sass/style.scss'
 
 class App extends React.Component {
   render() {
-    return (<div>Hello Sensei</div>)
+    return (<div>Hello Sensei!</div>)
   } 
 }
 

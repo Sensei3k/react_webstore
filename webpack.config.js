@@ -24,7 +24,7 @@ module.exports = {
         use: {
           loader: 'file-loader',
           options: {
-            name: './images/[name].[ext]'
+            name: './src/assets/[name].[ext]'
           }
         }
       },
@@ -33,7 +33,7 @@ module.exports = {
         use: {
           loader: 'file-loader',
           options: {
-            name: './fonts/[name].[ext]'
+            name: './src/fonts/[name].[ext]'
           }
         }
       }
@@ -54,6 +54,6 @@ module.exports = {
       filename: 'index.html',
       inject: 'body'
     }),
-    new CopyWebpackPlugin([{ from: 'src/images', to: 'images' }])
+    new CopyWebpackPlugin([{ from: 'src/assets', to: 'assets' }])
   ]
 }
