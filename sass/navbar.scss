@@ -1,0 +1,15 @@
+.Navbar {
+  display: flex;
+  width: 100;
+  background-color: black;
+  color: white;
+  padding: 0 7%;
+
+  p {
+    padding-right: 20px;
+    img {
+      height: 16px;
+      margin-right: 4px;
+    }
+  }
+}

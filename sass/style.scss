@@ -1,4 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=ABeeZee&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  background-color: dodgerblue;
-  color: yellow;
+  margin: 0;
+  font-family: 'ABeeZee', sans-serif;
+}
+
+.main-container {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  background-color: #000;
+  background-size: cover;
 }
