@@ -1,6 +1,7 @@
 import React from 'react'
 
 import ProductCard from '../components/ProductCard'
+import Basket from '../components/Basket'
 
 class Home extends React.Component {
   constructor(props) {
@@ -33,6 +34,13 @@ class Home extends React.Component {
             })}
           </div>
         </div>
+        <Basket
+          data={this.props.data.filter(val => 
+            this.props.selectedIds.includes(val.id)
+          )}
+          removeFromBasket={this.props.removeFromBasket}
+          goToCheckout={this.props.goToCheckout}    
+        />
       </div>
     )
   }
