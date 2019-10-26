@@ -1,5 +1,7 @@
 import React from 'react'
 
+import '../../sass/basket.scss'
+
 class Basket extends React.Component {
   renderBasketItem ({ title, id, image, price }) {
     console.log(this.props, 'props')

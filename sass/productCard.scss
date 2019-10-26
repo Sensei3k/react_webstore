@@ -19,6 +19,10 @@
   background-size: 110px;
   background-repeat: no-repeat;
 
+  &.selected-game {
+    opacity: 0.5;
+  }
+  
   p {
     color: #37474f;
   }

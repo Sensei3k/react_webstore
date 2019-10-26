@@ -8,9 +8,8 @@ class Home extends React.Component {
     super(props)
 
     console.log(this.props, 'Home')
-    console.log(this.props.data, 'data')
-    // console.log(this.props.data.id, 'id')
-    
+    // console.log(this.props.data, 'data')
+    console.log(this.props.data.id, 'data')
   }
 
   render() {
@@ -28,7 +27,7 @@ class Home extends React.Component {
                   image={data.image}
                   price={data.price}
                   selected={this.props.selectedIds.includes(data.id)}
-                  addTobasket={() => this.props.addTobasket(data.id)}
+                  addToBasket={() => this.props.addToBasket(data.id)}
                 />
               )
             })}

@@ -2,10 +2,10 @@ import React from 'react'
 
 import '../../sass/productCard.scss'
 
-const ProductCard = ({ title, description, image, price, addToBasket }) => {
+const ProductCard = ({ title, description, image, price, addToBasket, selected }) => {
   return (
     <div className='projects-info-wrapper'>
-      <div className='project-block'>
+      <div className={`project-block ${selected ? 'selected-game' : ''}`}>
         <img className='image' src={image} alt={title} />
         <div>
           <h4>{title}</h4>
@@ -14,9 +14,12 @@ const ProductCard = ({ title, description, image, price, addToBasket }) => {
             <img src='/assets/coins.png' alt='' />
             {price}
           </span>
-          <button className="button"
+          <button 
+            className='button'
             onClick={() => addToBasket()}>
-            <span>Add to Basket</span>
+            <span>
+              Add to Basket
+            </span>
           </button>
         </div>
       </div>
