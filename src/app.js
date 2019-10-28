@@ -28,14 +28,14 @@ const data = [
     id: '3',
     title: 'Bloodbourne',
     description: 'Bloobourne is an action role-playing video game developed by FromSoftware.',
-    price: '9999',
+    price: 9999,
     image: '/assets/game3.jpg'
   },
   {
-    id: '3',
+    id: '4',
     title: 'Evolve',
     description: 'Evolve is a first person shooter video game developed by Turtle Rock Studios.',
-    price: '150',
+    price: 150,
     image: '/assets/game4.jpg'
   }
 ]

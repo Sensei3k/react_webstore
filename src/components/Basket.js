@@ -6,7 +6,7 @@ class Basket extends React.Component {
   renderBasketItem ({ title, id, image, price }) {
     console.log(this.props, 'props')
     return (
-      <li className='basket-list-item'>
+      <li className='basket-list-item' key={id}>
         <img src={image} />
         <div>
           <h4 className='title'>{title}</h4>
