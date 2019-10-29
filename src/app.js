@@ -2,7 +2,6 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 import Navbar from '../src/components/Navbar'
-// import Data from '../src/components/Data'
 import Home from '../src/components/Home'
 import Checkout from '../src/components/Checkout'
 

@@ -40,7 +40,8 @@ class Basket extends React.Component {
             <span className='no-items'>No items</span>
           )}
         </div>
-        <div className='total'>
+        {/* When the basket is empty do not display total amount */}
+        <div className={`${this.props.data.length ? 'total' : 'none'}`}>
           <span>Total </span>{' '}
           {this.props.data.reduce((a, b) => a + b.price, 0)}{' '} Gil
         </div>
