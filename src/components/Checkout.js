@@ -28,7 +28,7 @@ class Checkout extends React.Component {
   render() {
     return(
       <div className='checkout-container'>
-        <img className='logo' src='/assets/logo.png' />
+        <img className='logo' src='./assets/logo.png' />
         <div className='checkout-inner-container'>
           <div className='content-container'>
             <button 
