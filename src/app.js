@@ -11,7 +11,6 @@ import '../sass/style.scss'
 import 'react-toastify/dist/ReactToastify.css'
 
 
-
 const data = [
   {
     id: '1',
@@ -129,3 +128,5 @@ ReactDOM.render(
   <App />,
   document.getElementById('root')
 )
+
+// style={{ backgroundImage: 'linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5) 45%, rgb(0, 0, 0) 50%), url(\'./assets/home_back.jpg\' )'}}
