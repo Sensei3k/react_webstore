@@ -9,7 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "webpack-dev-server --mode=development",
     "build": "webpack -p",
-    "deploy": "yarn run build && gh-pages -d dist -b master"
+    "deploy": "yarn run build && gh-pages -d dist"
   },
   "dependencies": {
     "@babel/core": "^7.6.4",
@@ -23,6 +23,7 @@
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-router-dom": "^5.1.2",
+    "react-toastify": "^5.4.0",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
     "webpack": "^4.41.2",

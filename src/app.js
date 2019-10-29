@@ -1,11 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+import {ToastContainer, toast} from 'react-toastify'
+
 import Navbar from '../src/components/Navbar'
 import Home from '../src/components/Home'
 import Checkout from '../src/components/Checkout'
 
 import '../sass/style.scss'
+import 'react-toastify/dist/ReactToastify.css'
+
 
 
 const data = [
@@ -41,7 +45,7 @@ const data = [
 class App extends React.Component {
   constructor(props) {
     super(props)
-
+    
     this.state = {
       currentPage: 'HOME',
       selectedIds: []
@@ -51,7 +55,7 @@ class App extends React.Component {
     this.addToBasket.bind(this)
     this.removeFromBasket.bind(this)
   }
-
+  
   // Function to navigate between pages
   navigate(page) {
     this.setState({ currentPage: page })
@@ -62,6 +66,10 @@ class App extends React.Component {
     const currentSelectedIds = this.state.selectedIds.slice(0)
     !currentSelectedIds.includes(id) && currentSelectedIds.push(id)
     this.setState({ selectedIds: currentSelectedIds })
+    toast.success('Successfully added to Basket', {
+      containerId: 'A',
+      position: toast.POSITION.TOP_CENTER
+    })
   }
 
   removeFromBasket(id) {
@@ -72,12 +80,15 @@ class App extends React.Component {
       }
     })
     this.setState({ selectedIds: newSelectedIds })
+    toast.warn('Item removed', {
+      containerId: 'B',
+      position: toast.POSITION.TOP_RIGHT
+    })
   }
-
 
   render() {
     return (
-      <div className="main-container">
+      <div className='main-container'>
         <Navbar />
         {this.state.currentPage === 'HOME' ? (
           <Home
@@ -95,9 +106,23 @@ class App extends React.Component {
             goToHome={() => this.navigate('HOME')}
           />
         )}
+        <ToastContainer
+          containerId='A'
+          hideProgressBar={true}
+          rtl={false}
+          closeOnClick
+          autoClose={2000}
+        />
+        <ToastContainer
+          containerId='B'
+          hideProgressBar={true}
+          rtl={false}
+          closeOnClick
+          autoClose={2000}
+        />
       </div>
     )
-  } 
+  }
 }
 
 ReactDOM.render(
