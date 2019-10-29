@@ -16,7 +16,7 @@ class Home extends React.Component {
     return(
       <div className='pages-container'>
         <div className='pages-inner-container'>
-          <img className='logo' src="/assets/logo.png"/>
+          <img className='logo' src="./assets/logo.png"/>
           <div className='home-left-side'>
             {this.props.data.map(data => {
               return(

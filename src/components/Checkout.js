@@ -11,7 +11,7 @@ class Checkout extends React.Component {
         <div>
           <h4 className='title'>{title}</h4>
           <span className='price'>
-            <img src='/assets/coins.png' alt='' />
+            <img src='./assets/coins.png' alt='' />
             {price} gil
           </span>
         </div>
@@ -19,7 +19,7 @@ class Checkout extends React.Component {
           className='button'
           onClick={() => this.props.removeFromBasket(id)}
         >
-          <img src='/assets/bin.png' />
+          <img src='./assets/bin.png' />
         </button>
       </li>
     )
