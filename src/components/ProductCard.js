@@ -11,7 +11,7 @@ const ProductCard = ({ title, description, image, price, addToBasket, selected }
           <h4>{title}</h4>
           <span className='description'>{description}</span>
           <span className='price'>
-            <img src='./assets/coins.png' alt='' />
+            <img src='./assets/coins.png' alt='coins' />
             {price}
           </span>
           <button 
