@@ -16,7 +16,9 @@ const ProductCard = ({ title, description, image, price, addToBasket, selected }
           </span>
           <button 
             className='button'
-            onClick={() => addToBasket()}>
+            disabled={selected}
+            onClick={addToBasket}
+          >
             <span>
               Add to Basket
             </span>
