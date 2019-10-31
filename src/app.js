@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import {ToastContainer, toast} from 'react-toastify'
+import {ToastContainer, toast, Zoom} from 'react-toastify'
 
 import Navbar from '../src/components/Navbar'
 import Home from '../src/components/Home'
@@ -10,9 +10,6 @@ import Checkout from '../src/components/Checkout'
 import '../sass/style.scss'
 import 'react-toastify/dist/ReactToastify.css'
 
-// const maincontainer = {
-//   backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 45%, rgb(0, 0, 0) 50%), url("assets/home_back.jpg")'
-// }
 
 const data = [
   {
@@ -113,8 +110,9 @@ class App extends React.Component {
           containerId='A'
           hideProgressBar={true}
           rtl={false}
-          closeOnClick
           autoClose={2000}
+          transition={Zoom}
+          closeOnClick
         />
         <ToastContainer
           containerId='B'
@@ -122,6 +120,7 @@ class App extends React.Component {
           rtl={false}
           closeOnClick
           autoClose={2000}
+          transition={Zoom}
         />
       </div>
     )
