@@ -10,6 +10,13 @@ import Checkout from '../src/components/Checkout'
 import '../sass/style.scss'
 import 'react-toastify/dist/ReactToastify.css'
 
+// const style = {
+//   backgroundImage: linearGradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 45%, rgb(0, 0, 0) 50%), url('./assets/home_back.jpg')
+// }
+
+const style = {
+  backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 45%, rgb(0, 0, 0) 50%), url("assets/home_back.jpg")'
+}
 
 const data = [
   {
@@ -88,7 +95,7 @@ class App extends React.Component {
   render() {
     return (
       <div
-        className='main-container'>
+        className='main-container' style={style}>
         <Navbar />
         {this.state.currentPage === 'HOME' ? (
           <Home
